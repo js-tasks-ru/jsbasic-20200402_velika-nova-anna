@@ -5,5 +5,9 @@
  * @returns {string}
  */
 function showSalary(data, age) {
-  // ваш код...
+ let str = [];
+  let result = data.map(function(item, index, array) {
+    if(item.age <= age) str.push(item.name + ', ' + item.balance);
+  });
+  return str.join('\n');
 }
